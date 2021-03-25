@@ -2,79 +2,53 @@
  weblocks-navigation-widget
 =================
 
-.. insert-your badges like that:
-
-.. image:: https://travis-ci.org/40ants/cl-hamcrest.svg?branch=master
-    :target: https://travis-ci.org/40ants/cl-hamcrest
-
 .. Everything starting from this commit will be inserted into the
    index page of the HTML documentation.
 .. include-from
 
-Give some introduction.
+A routing widget for Weblocks, which changes its children when the
+user goes to another URL.
 
-Reasoning
-=========
 
-Explain why this project so outstanding and why it
-was created.
+Usage
+=====
 
-You can give some examples. This is how common lisp
-code should be formatted:
+To create a routing mechanism for your app, use the ``defroute`` widget::
 
 .. code-block:: common-lisp
 
-   (defvar log-item '(:|@message| "Some"
-                      :|@timestamp| 122434342
-                      ;; this field is wrong and
-                      ;; shouldn't be here
-                      :|@fields| nil))
+    (defroutes tasks-routes
+      ("/tasks/" (make-tasks-list))
+    ("/tasks/task/\\d+" (make-task)))
 
-And this is how you can provide REPL examples:
+It associates an url, which can contain a regexp, to a widget.
 
-.. code-block:: common-lisp-repl
+Important: the navigation widget must return a new widget everytime a route is changed.
 
-   TEST> (format nil "Blah minor: ~a"
-                     100500)
-   "Blah minor: 100500"
+Inside the child widget, you can read the url parameters back with
+``(weblocks/request:get-path)``, which returns a string. Then you can
+extract the url parameter by matching the parameter regexp against it. For
+example::
 
-Roadmap
-=======
+.. code-block:: common-lisp
 
-Provide a Roadmap.
+  (defun make-task ()
+    (let* ((path (weblocks/request:get-path))
+         (id (first (ppcre:all-matches-as-strings "\\d+" path)))
+         (task (find-task :id id)))
+      (format t "The task with id ~a is ~a~&" id task)
+      (make-tasks-list :task task)))
+
+Now define the route widget as the main widget of your app.  The
+``defroutes <name>`` macro has automatically created a ``make-<name>``
+function to create the route widget.
+
+.. code-block:: common-lisp
+    (defmethod weblocks/session:init ((app tasks))
+        (declare (ignorable app))
+        (make-tasks-routes))
+
+
 
 .. Everything after this comment will be omitted from HTML docs.
 .. include-to
-
-Building Documentation
-======================
-
-Provide instruction how to build or use your library.
-
-How to build documentation
---------------------------
-
-To build documentation, you need a Sphinx. It is
-documentaion building tool written in Python.
-
-To install it, you need a virtualenv. Read
-this instructions
-`how to install it
-<https://virtualenv.pypa.io/en/stable/installation/#installation>`_.
-
-Also, you'll need a `cl-launch <http://www.cliki.net/CL-Launch>`_.
-It is used by documentation tool to run a script which extracts
-documentation strings from lisp systems.
-
-Run these commands to build documentation::
-
-  virtualenv env
-  source env/bin/activate
-  pip install -r docs/requirements.txt
-  invoke build_docs
-
-These commands will create a virtual environment and
-install some python libraries there. Command ``invoke build_docs``
-will build documentation and upload it to the GitHub, by replacing
-the content of the ``gh-pages`` branch.
-
