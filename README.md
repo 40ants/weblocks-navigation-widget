@@ -1,5 +1,7 @@
 <a id="x-28WEBLOCKS-NAVIGATION-WIDGET-3A-40README-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29"></a>
 
+**Warning!** This repository is deprecated and was renamed to https://github.com/40ants/reblocks-navigation-widget
+
 # Weblocks Navigation Widget
 
 <a id="weblocks-navigation-widget-asdf-system-details"></a>
