@@ -2,7 +2,8 @@
   (:use #:cl)
   (:import-from #:40ants-ci/workflow
                 #:defworkflow)
-  (:import-from #:40ants-ci/jobs/linter))
+  (:import-from #:40ants-ci/jobs/linter)
+  (:import-from #:40ants-ci/jobs/docs))
 (in-package weblocks-navigation-widget/ci)
 
 
