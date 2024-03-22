@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rss version="2.0">
+    <channel>
+        <title>weblocks-navigation-widget ChangeLog</title>
+        <link>https://40ants.com/weblocks-navigation-widget/</link>
+        <generator>xml-emitter</generator>
+        <language>en-us</language>
+        <item>
+            <title>0.7.0  (2021-10-19)</title>
+            <description>&lt;ul&gt;&lt;li&gt;&lt;p&gt;Removed function &lt;code&gt;MAKE-NAVIGATION-WIDGET&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Exported symbols, related to the widget class.&lt;/p&gt;&lt;/li&gt;&lt;li&gt;&lt;p&gt;Added documentation.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</description>
+            <pubDate>Tue, 19 Oct 2021 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>0.6.1  (2021-03-12)</title>
+            <description>&lt;p&gt;Moved to &lt;code&gt;WEBLOCKS-UI/CORE:UI-WIDGET&lt;/code&gt; because &lt;code&gt;WEBLOCKS-UI/CORE:WIDGET&lt;/code&gt;
+is deprecated and will be removed soon.&lt;/p&gt;</description>
+            <pubDate>Fri, 12 Mar 2021 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>0.6.0  (2019-07-23)</title>
+            <description>&lt;p&gt;Renamed &lt;code&gt;DEFWIDGET&lt;/code&gt; to &lt;a href=&quot;https://40ants.com/weblocks-navigation-widget/#x-28WEBLOCKS-NAVIGATION-WIDGET-3ADEFROUTES-20-2840ANTS-DOC-2FLOCATIVES-3AMACRO-29-29&quot; data-document=&quot;https://40ants.com/weblocks-navigation-widget/&quot; data-node=&quot;x-28WEBLOCKS-NAVIGATION-WIDGET-3ADEFROUTES-20-2840ANTS-DOC-2FLOCATIVES-3AMACRO-29-29&quot;&gt;&lt;code&gt;weblocks-navigation-widget:defroutes&lt;/code&gt;&lt;/a&gt;, so that it is more explicit
+and it doesn&apos;t clash with &lt;code&gt;WEBLOCKS/WIDGET:DEFWIDGET&lt;/code&gt;.&lt;/p&gt;</description>
+            <pubDate>Tue, 23 Jul 2019 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>0.5.0  (2019-01-22)</title>
+            <description>&lt;p&gt;Function &lt;code&gt;WEBLOCKS/RESPONSE:ABORT-PROCESSING&lt;/code&gt; was replaced with
+&lt;code&gt;WEBLOCKS/RESPONSE:IMMEDIATE-RESPONSE&lt;/code&gt; to work with &lt;code&gt;Weblocks &amp;gt;= 0.35.0&lt;/code&gt;.&lt;/p&gt;</description>
+            <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>0.4.1  (2018-11-25)</title>
+            <description>&lt;p&gt;Message &amp;quot;Rendering navigation widget&amp;quot; now logged with &lt;code&gt;DEBUG&lt;/code&gt; level.&lt;/p&gt;</description>
+            <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>0.4.0  (2018-02-04)</title>
+            <description>&lt;p&gt;Move to package inferred &lt;code&gt;ASDF&lt;/code&gt; class.&lt;/p&gt;</description>
+            <pubDate>Sun, 04 Feb 2018 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>0.3.0  (2018-01-11)</title>
+            <description>&lt;p&gt;Added a &lt;code&gt;DEFWIDGET&lt;/code&gt; macro, which defines a new class,
+based on navigation-widget, along with rules and a
+&lt;code&gt;make-&amp;lt;new-class&amp;gt;&lt;/code&gt; function.&lt;/p&gt;&lt;p&gt;This can be useful when you need navigation widget with
+customized &lt;code&gt;WEBLOCKS/WIDGET:RENDER&lt;/code&gt; method or attached dependencies. &lt;/p&gt;</description>
+            <pubDate>Thu, 11 Jan 2018 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>0.2.0  (2018-01-07)</title>
+            <description>&lt;p&gt;Fixed to work with weblocks &amp;gt;= 0.22.0.&lt;/p&gt;</description>
+            <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>0.1.1  (2017-12-10)</title>
+            <description>&lt;p&gt;Now if no regex for &lt;code&gt;URL&lt;/code&gt;, Weblocks will return 404.
+But you can redefine this behavior, providing a rule with &lt;code&gt;t&lt;/code&gt;
+instead of the regex.&lt;/p&gt;</description>
+            <pubDate>Sun, 10 Dec 2017 00:00:00 +0000</pubDate>
+        </item>
+        <item>
+            <title>0.1.0  (2017-12-10)</title>
+            <description>&lt;p&gt;Basic functionality.&lt;/p&gt;</description>
+            <pubDate>Sun, 10 Dec 2017 00:00:00 +0000</pubDate>
+        </item>
+    </channel>
+</rss>
