@@ -7,9 +7,7 @@
 ## 0.7.0 (2021-10-19)
 
 * Removed function `MAKE-NAVIGATION-WIDGET`.
-
 * Exported symbols, related to the widget class.
-
 * Added documentation.
 
 <a id="x-28WEBLOCKS-NAVIGATION-WIDGET-2FCHANGELOG-3A-3A-7C0-2E6-2E1-7C-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29"></a>
@@ -54,7 +52,7 @@ based on navigation-widget, along with rules and a
 `make-<new-class>` function.
 
 This can be useful when you need navigation widget with
-customized `WEBLOCKS/WIDGET:RENDER` method or attached dependencies.
+customized `WEBLOCKS/WIDGET:RENDER` method or attached dependencies. 
 
 <a id="x-28WEBLOCKS-NAVIGATION-WIDGET-2FCHANGELOG-3A-3A-7C0-2E2-2E0-7C-2040ANTS-DOC-2FLOCATIVES-3ASECTION-29"></a>
 
